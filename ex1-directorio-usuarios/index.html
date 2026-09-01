@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Directorio de Usuarios</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Directorio de Usuarios</h1>
+
+        <p class="description">
+            Consulta, filtra y selecciona usuarios registrados.
+        </p>
+
+        <section class="search-section">
+            <label for="searchInput">Buscar usuario por nombre:</label>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Escribe un nombre..."
+                autocomplete="off"
+            >
+        </section>
+
+        <section>
+            <h2>Usuarios</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Empresa</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="usersTableBody">
+                        <tr>
+                            <td colspan="3">
+                                Cargando usuarios...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section
+            id="userDetail"
+            class="detail hidden"
+            aria-live="polite"
+        >
+            <div class="detail-header">
+                <h2>Detalle del usuario</h2>
+
+                <button id="closeDetail" type="button">
+                    Cerrar
+                </button>
+            </div>
+
+            <div id="detailContent"></div>
+        </section>
+
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Aplicación -->
+    <script src="app.js"></script>
+
+</body>
+</html>
