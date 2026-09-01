@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Calculadora Segura</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="calculator-container">
+
+        <h1>Mini Calculadora Segura</h1>
+
+        <form id="calculatorForm">
+
+            <div class="form-group">
+                <label for="number1">
+                    Primer número
+                </label>
+
+                <input
+                    type="number"
+                    id="number1"
+                    step="any"
+                    placeholder="Ej: 10"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="operation">
+                    Operación
+                </label>
+
+                <select id="operation">
+                    <option value="+">Sumar (+)</option>
+                    <option value="-">Restar (-)</option>
+                    <option value="*">Multiplicar (×)</option>
+                    <option value="/">Dividir (÷)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="number2">
+                    Segundo número
+                </label>
+
+                <input
+                    type="number"
+                    id="number2"
+                    step="any"
+                    placeholder="Ej: 5"
+                >
+            </div>
+
+            <button type="submit">
+                Calcular
+            </button>
+
+        </form>
+
+        <section id="message" class="message"></section>
+
+        <section class="result-section">
+
+            <h2>Resultado</h2>
+
+            <p id="result">—</p>
+
+        </section>
+
+        <section class="history-section">
+
+            <h2>Historial</h2>
+
+            <ul id="historyList"></ul>
+
+        </section>
+
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
