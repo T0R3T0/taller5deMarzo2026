@@ -1,6 +1,6 @@
 const API_URL = "https://jsonplaceholder.typicode.com/users";
 
-let users = [];
+let users = []; // Se almacenan los usuarios cargados desde la API
 
 /**
  * Carga los usuarios desde la API.
@@ -9,8 +9,10 @@ const loadUsers = async () => {
     try {
         const response = await axios.get(API_URL);
 
-        users = response.data;
+        users = response.data;// Guardamos los usuarios en la variable global
+        
 
+        //Log de cantidad de usuarios y primera fila(Pedido en la rubirca)
         console.log("=== CARGA DE USUARIOS ===");
         console.log("Cantidad de usuarios:", users.length);
         console.log("Primera fila:", users[0]);
@@ -33,7 +35,7 @@ const loadUsers = async () => {
 /**
  * Renderiza los usuarios dentro de la tabla.
  */
-const renderUsers = (usersToRender) => {
+const renderUsers = (usersToRender) => { // Se utiliza la variable usersToRender para renderizar los usuarios filtrados o todos los usuarios
 
     const $tableBody = $("#usersTableBody");
 
