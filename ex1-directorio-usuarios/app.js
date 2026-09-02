@@ -1,4 +1,4 @@
-const API_URL = "https://jsonplaceholder.typicode.com/users"; 
+const API_URL = "https://jsonplaceholder.typicode.com/users";
 
 let users = []; // Se almacenan los usuarios cargados desde la API
 
